@@ -1,0 +1,9 @@
+[Unit]
+Description=Start gpsd export service.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/start_gpsd_export.sh
+
+[Install]
+WantedBy=multi-user.target

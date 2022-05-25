@@ -1,0 +1,9 @@
+[Unit]
+Description=Start rtl_ais service.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/start_rtl_ais.sh
+
+[Install]
+WantedBy=multi-user.target
