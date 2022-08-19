@@ -48,6 +48,7 @@ sudo apt-get -y install \
   sqlite3 \
   tk-dev \
   tmux \
+  tree \
   unzip \
   uuid-dev \
   vim \
