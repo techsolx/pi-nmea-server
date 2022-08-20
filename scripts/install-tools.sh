@@ -34,6 +34,7 @@ sudo apt-get -y install \
   libreadline6-dev \
   libsqlite3-dev \
   libssl-dev \
+  lightdm \
   lm-sensors \
   lzma \
   lzma-dev \
@@ -44,6 +45,7 @@ sudo apt-get -y install \
   pkg-config \
   python3-pip \
   python-is-python3 \
+  sense-hat \
   socat \
   sqlite3 \
   tk-dev \
@@ -53,10 +55,11 @@ sudo apt-get -y install \
   uuid-dev \
   vim \
   wget \
+  xubuntu-desktop \
   zlib1g-dev
 
 # Setup sudo to allow no-password sudo for "$USERNAME"
-#sudo useradd -m -s /bin/bash $USERNAME
+sudo useradd -m -s /bin/bash $USERNAME
 sudo cp /etc/sudoers /etc/sudoers.orig
 echo "$USERNAME  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USERNAME
 
