@@ -41,6 +41,7 @@ sudo apt-get -y install \
   mtr \
   net-tools \
   nmap \
+  octave \
   opencpn \
   pkg-config \
   python3-pip \
