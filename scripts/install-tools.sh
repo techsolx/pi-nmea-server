@@ -18,6 +18,7 @@ sudo apt-get -y install \
   gpsd \
   gpsd-clients \
   htop \
+  i2c-tools \
   jq \
   lcov \
   libbz2-dev \
@@ -46,6 +47,7 @@ sudo apt-get -y install \
   pkg-config \
   python3-pip \
   python-is-python3 \
+  rxvt-unicode \
   sense-hat \
   socat \
   sqlite3 \
