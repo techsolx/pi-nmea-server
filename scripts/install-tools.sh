@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
 USERNAME=navigator
+HOST_NAME=nav1
 
 sudo apt-get -y update
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
@@ -10,6 +11,7 @@ sudo apt-get -y install \
   build-essential \
   ca-certificates \
   cmake \
+  console-setup-linux \
   curl \
   fail2ban \
   fldigi \
@@ -32,7 +34,7 @@ sudo apt-get -y install \
   liblzma-dev \
   libncurses5-dev \
   libncursesw5-dev \
-  libreadline6-dev \
+  libreadline-dev \
   libsqlite3-dev \
   libssl-dev \
   lightdm \
@@ -58,14 +60,20 @@ sudo apt-get -y install \
   uuid-dev \
   vim \
   wget \
-  xubuntu-desktop \
+  xfonts-terminus \
+  xterm \
   zlib1g-dev
 
 # Setup sudo to allow no-password sudo for "$USERNAME"
-sudo useradd -m -s /bin/bash $USERNAME
+sudo useradd -m -s /bin/bash $USERNAME || true
 sudo cp /etc/sudoers /etc/sudoers.orig
 echo "$USERNAME  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USERNAME
 
 # other stuff for this box:
-sudo -H -u $USER bash -c "curl https://pyenv.run | bash"
-sudo -H -u $USER bash -c "curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash"
+if ! [[ -x /home/$USERNAME/.pyenv/bin/pyenv ]]; then
+  sudo -H -u $USERNAME bash -c "curl https://pyenv.run | bash"
+fi
+
+# set hostname
+sudo echo $HOST_NAME > /etc/hostname
+sudo hostname $HOST_NAME
