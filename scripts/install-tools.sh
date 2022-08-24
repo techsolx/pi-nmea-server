@@ -42,6 +42,7 @@ sudo apt-get -y install \
   lzma \
   lzma-dev \
   mtr \
+  neofetch \
   net-tools \
   nmap \
   octave \
