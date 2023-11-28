@@ -16,7 +16,7 @@ DATE=$(date "+%Y%m%d %T")
 start_rtl_ais() {
     if [ -x "$(command -v rtl_ais)" ]; then
         echo "$DATE : Starting rtl_ais TCP on $PORT"
-        (rtl_ais -T -P $PORT &)
+        (rtl_ais -P $PORT -T &)
     else
         echo "$DATE : error rtl_ais not found"
     fi

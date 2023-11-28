@@ -8,7 +8,7 @@ Console and/or info and errors logged to LOG_FILE
 
 set -e
 LOG_FILE=/var/log/gpsd_export.log
-PORT=2948 # one port above gpsd port, can sleect any unused port
+PORT=2948 # one port above gpsd port, can select any unused port
 >>$LOG_FILE
 exec 3>&1 1>>${LOG_FILE} 2>&1
 

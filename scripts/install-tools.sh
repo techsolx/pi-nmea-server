@@ -30,11 +30,11 @@ sudo apt-get -y install \
   libffi-dev \
   libgdbm-compat-dev \
   libgdbm-dev \
-  libgdbm-dev \
   liblzma-dev \
   libncurses5-dev \
   libncursesw5-dev \
   libreadline-dev \
+  librtlsdr-dev \
   libsqlite3-dev \
   libssl-dev \
   lightdm \
@@ -42,18 +42,21 @@ sudo apt-get -y install \
   lzma \
   lzma-dev \
   mtr \
+  ncat \
   neofetch \
-  net-tools \
   nmap \
+  net-tools \
   octave \
   opencpn \
   pkg-config \
   python3-pip \
   python-is-python3 \
+  qtbase5-dev \
   rxvt-unicode \
   sense-hat \
   socat \
   sqlite3 \
+  tcpdump \
   tk-dev \
   tmux \
   tree \
